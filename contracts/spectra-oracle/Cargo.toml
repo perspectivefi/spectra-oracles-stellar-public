@@ -1,0 +1,25 @@
+[package]
+name = "spectra-oracle"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license.workspace = true
+repository.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+doctest = false
+
+[dependencies]
+soroban-sdk = { workspace = true }
+stellar-access = "=0.6.0"
+stellar-contract-utils = "=0.6.0"
+stellar-macros = "=0.6.0"
+
+[dev-dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }
+serde = { version = "=1.0.227", features = ["derive"] }
+serde_json = "=1.0.149"
+
+[features]
+testutils = ["soroban-sdk/testutils"]

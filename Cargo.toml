@@ -1,0 +1,24 @@
+[workspace]
+resolver = "2"
+members = ["contracts/*"]
+
+[workspace.package]
+license = "BUSL-1.1"
+repository = "https://github.com/perspectivefi/spectra-oracles-stellar-public"
+
+[workspace.dependencies]
+soroban-sdk = "=23.5.1"
+
+[profile.release]
+opt-level = "z"
+overflow-checks = true
+debug = 0
+strip = "symbols"
+debug-assertions = false
+panic = "abort"
+codegen-units = 1
+lto = true
+
+[profile.release-with-logs]
+inherits = "release"
+debug-assertions = true

@@ -1,0 +1,4 @@
+[build]
+# Target is set by `stellar contract build`, not here.
+# Setting a default wasm target breaks `cargo test` because
+# dev-dependencies (serde, serde_json) require std.

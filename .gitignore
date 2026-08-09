@@ -1,0 +1,34 @@
+# Build artifacts
+target/
+*.wasm
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Soroban
+.soroban/
+.stellar/
+
+# Logs
+*.log
+
+# Test artifacts
+test-*.json
+test_snapshots/
+
+# Local credentials and deployment outputs
+.env
+.env.*
+identity/
+identities/
+deployment*.json
+
+# Agent rules (local only)
+AGENTS.md
